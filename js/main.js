@@ -47,11 +47,37 @@
     setTimeout(() => intro.classList.add("gone"), 2450);    // remove from flow
   }
 
-  /* ---------- 2. Sticky header state ---------- */
+  /* ---------- 2. Scroll: header state, progress bar, parallax ---------- */
   const header = $("#header");
-  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
+  const progress = $("#scrollProgress");
+  const parallaxEls = prefersReduced ? [] : $$("[data-parallax]");
+  let ticking = false;
+
+  function onScroll() {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+
+    if (progress) {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      progress.style.transform = `scaleX(${max > 0 ? h.scrollTop / max : 0})`;
+    }
+
+    const vh = window.innerHeight;
+    parallaxEls.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -120 || r.top > vh + 120) return;            // skip off-screen
+      const speed = parseFloat(el.dataset.parallax) || 0.1;
+      const cap = r.height * 0.06;
+      let y = (r.top + r.height / 2 - vh / 2) * -speed;
+      y = Math.max(-cap, Math.min(cap, y));
+      el.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0) scale(1.15)`;
+    });
+    ticking = false;
+  }
+  const requestScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } };
   onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", requestScroll, { passive: true });
+  window.addEventListener("resize", requestScroll, { passive: true });
 
   /* ---------- 3. Logo menu (drawer) ---------- */
   const menu = $("#menu");
@@ -108,8 +134,8 @@
     });
   });
 
-  /* ---------- 5. Scroll reveal ---------- */
-  const revealEls = $$(".reveal");
+  /* ---------- 5. Scroll reveal (sections + project cards) ---------- */
+  const revealEls = $$(".reveal, .card");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries, obs) => entries.forEach((entry) => {

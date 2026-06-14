@@ -18,6 +18,9 @@
     <img src="assest/brand-logo.png" alt="" class="intro-logo" id="introLogo" />
   </div>
 
+  <!-- scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ============ HEADER / NAV ============ -->
   <header class="site-header" id="header">
     <div class="container header-inner">
@@ -76,6 +79,14 @@
         </div>
       </div>
       <a href="#manifesto" class="scroll-hint" aria-label="Scroll down">Scroll</a>
+    </section>
+
+    <!-- ============ MARQUEE BAND ============ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Design <i>/</i> Refine <i>/</i> Transform <i>/</i> Architecture <i>/</i> Interiors <i>/</i> Landscape <i>/</i> </span>
+        <span>Design <i>/</i> Refine <i>/</i> Transform <i>/</i> Architecture <i>/</i> Interiors <i>/</i> Landscape <i>/</i> </span>
+      </div>
     </section>
 
     <!-- ============ MANIFESTO / ETHOS ============ -->
@@ -295,7 +306,7 @@
     <!-- ============ SUSTAINABILITY ============ -->
     <section class="sustain" id="sustainability">
       <div class="sustain-media">
-        <img loading="lazy" onerror="this.style.opacity=0"
+        <img loading="lazy" data-parallax="0.12" onerror="this.style.opacity=0"
           src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1600&q=80" alt="Sunlight through trees" />
       </div>
       <div class="container sustain-content reveal">
@@ -331,7 +342,7 @@
           <a href="#contact" class="btn btn-solid">Work with us</a>
         </div>
         <div class="studio-media reveal">
-          <img loading="lazy" onerror="this.style.opacity=0"
+          <img loading="lazy" data-parallax="0.08" onerror="this.style.opacity=0"
             src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=80" alt="Studio workspace" />
         </div>
       </div>

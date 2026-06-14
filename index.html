@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaisen Design &amp; Construction — Design-build, refined.</title>
+  <meta name="description" content="Kaisen Design &amp; Construction — one accountable team from first sketch to final handover. Architecture, interiors, landscape and construction under one roof." />
+  <link rel="icon" href="assest/brand-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ INTRO (logo starts centered, flies to the menu) ============ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <img src="assest/brand-logo.png" alt="" class="intro-logo" id="introLogo" />
+  </div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <button class="brand" id="brandBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <img src="assest/brand-logo.png" alt="Kaisen" class="brand-mark" />
+        <span class="brand-text">
+          <strong>KAISEN</strong>
+          <small>Design &amp; Construction</small>
+        </span>
+        <span class="brand-burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+
+      <div class="header-center">
+        <span class="header-tagline">Design. <em>Refine.</em> Transform.</span>
+        <nav class="header-disc" aria-label="Disciplines">
+          <a href="#projects">Architecture</a><span>,</span>
+          <a href="#projects">Interior</a><span>,</span>
+          <a href="#projects">Landscape</a>
+        </nav>
+      </div>
+
+      <a href="#contact" class="btn btn-pill header-cta">Start a project</a>
+    </div>
+  </header>
+
+  <!-- ============ LOGO MENU (drawer opened by the logo) ============ -->
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+  <aside class="menu" id="menu" aria-hidden="true" aria-label="Menu">
+    <button class="menu-close" id="menuClose" aria-label="Close menu"><span></span><span></span></button>
+    <nav class="menu-nav">
+      <a href="#top" data-menu>Home</a>
+      <a href="#projects" data-menu>Projects</a>
+      <a href="#approach" data-menu>Approach</a>
+      <a href="#sustainability" data-menu>Sustainability</a>
+      <a href="#studio" data-menu>Studio</a>
+      <a href="#contact" data-menu>Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-pill menu-cta" data-menu>Start a project</a>
+    <p class="menu-foot">Kaisen Design &amp; Construction</p>
+  </aside>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80"
+          alt="Modern architectural facade" loading="eager"
+          onerror="this.style.display='none'" />
+      </div>
+      <div class="container hero-content">
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-solid">View our work</a>
+          <a href="#contact" class="btn btn-ghost">Start a project →</a>
+        </div>
+      </div>
+      <a href="#manifesto" class="scroll-hint" aria-label="Scroll down">Scroll</a>
+    </section>
+
+    <!-- ============ MANIFESTO / ETHOS ============ -->
+    <section class="manifesto" id="manifesto">
+      <div class="container">
+        <p class="manifesto-line reveal">
+          For us, good is never finished. Every project is an experiment in living
+          better — <span class="hl">pragmatic where it counts, ambitious where it matters.</span>
+          We say <em>yes</em> to constraints and turn them into the idea.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-meta">A curated cross-section of our work across scales and disciplines.</p>
+        </div>
+
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="residential">Residential</button>
+          <button class="filter" data-filter="commercial">Commercial</button>
+          <button class="filter" data-filter="interiors">Interiors</button>
+          <button class="filter" data-filter="landscape">Landscape</button>
+          <button class="filter" data-filter="renovation">Renovation</button>
+        </div>
+
+        <div class="grid" id="grid">
+
+          <!-- Residential -->
+          <article class="card" data-category="residential">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1100&q=80" alt="Ridgeline House" />
+              <span class="card-tag">Residential</span>
+            </a>
+            <div class="card-body">
+              <h3>Ridgeline House</h3>
+              <p>Aspen, USA</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="residential">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=80" alt="Courtyard Villa" />
+              <span class="card-tag">Residential</span>
+            </a>
+            <div class="card-body">
+              <h3>Courtyard Villa</h3>
+              <p>Dubai, UAE</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="residential">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=80" alt="The Terraces" />
+              <span class="card-tag">Residential</span>
+            </a>
+            <div class="card-body">
+              <h3>The Terraces</h3>
+              <p>Lisbon, Portugal</p>
+            </div>
+          </article>
+
+          <!-- Commercial -->
+          <article class="card" data-category="commercial">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=80" alt="Kaisen HQ Tower" />
+              <span class="card-tag">Commercial</span>
+            </a>
+            <div class="card-body">
+              <h3>Kaisen HQ Tower</h3>
+              <p>Singapore</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="commercial">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1100&q=80" alt="Market Pavilion" />
+              <span class="card-tag">Commercial</span>
+            </a>
+            <div class="card-body">
+              <h3>Market Pavilion</h3>
+              <p>Copenhagen, Denmark</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="commercial">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=1100&q=80" alt="Helix Offices" />
+              <span class="card-tag">Commercial</span>
+            </a>
+            <div class="card-body">
+              <h3>Helix Offices</h3>
+              <p>Austin, USA</p>
+            </div>
+          </article>
+
+          <!-- Interiors -->
+          <article class="card" data-category="interiors">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1100&q=80" alt="Atrium Loft" />
+              <span class="card-tag">Interiors</span>
+            </a>
+            <div class="card-body">
+              <h3>Atrium Loft</h3>
+              <p>New York, USA</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="interiors">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1100&q=80" alt="Warm Minimal Penthouse" />
+              <span class="card-tag">Interiors</span>
+            </a>
+            <div class="card-body">
+              <h3>Warm Minimal Penthouse</h3>
+              <p>Tokyo, Japan</p>
+            </div>
+          </article>
+
+          <!-- Landscape -->
+          <article class="card" data-category="landscape">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=1100&q=80" alt="Riverside Park" />
+              <span class="card-tag">Landscape</span>
+            </a>
+            <div class="card-body">
+              <h3>Riverside Park</h3>
+              <p>Seoul, South Korea</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="landscape">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1100&q=80" alt="Desert Garden" />
+              <span class="card-tag">Landscape</span>
+            </a>
+            <div class="card-body">
+              <h3>Desert Garden</h3>
+              <p>Phoenix, USA</p>
+            </div>
+          </article>
+
+          <!-- Renovation -->
+          <article class="card" data-category="renovation">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=80" alt="Heritage Mill Conversion" />
+              <span class="card-tag">Renovation</span>
+            </a>
+            <div class="card-body">
+              <h3>Heritage Mill Conversion</h3>
+              <p>Manchester, UK</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="renovation">
+            <a href="#contact" class="card-media">
+              <img loading="lazy" onerror="this.style.opacity=0"
+                src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1100&q=80" alt="Brownstone Revival" />
+              <span class="card-tag">Renovation</span>
+            </a>
+            <div class="card-body">
+              <h3>Brownstone Revival</h3>
+              <p>Brooklyn, USA</p>
+            </div>
+          </article>
+
+        </div>
+        <p class="grid-empty" id="gridEmpty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH (design-build "one roof") ============ -->
+    <section class="approach" id="approach">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">One team, sketch to handover.</h2>
+          <p class="section-meta">
+            Design and construction live under one roof, so the idea never gets lost
+            in translation. Five disciplines, one accountable team.
+          </p>
+        </div>
+        <div class="pillars">
+          <div class="pillar reveal"><span class="pillar-no">01</span><h3>Architecture</h3><p>Homes, workplaces, culture and civic spaces — from concept to permit.</p></div>
+          <div class="pillar reveal"><span class="pillar-no">02</span><h3>Interiors</h3><p>Warm, considered interiors detailed down to the doorknob.</p></div>
+          <div class="pillar reveal"><span class="pillar-no">03</span><h3>Landscape</h3><p>Gardens, terraces and public realm that connect building to ground.</p></div>
+          <div class="pillar reveal"><span class="pillar-no">04</span><h3>Engineering</h3><p>Structure and systems coordinated in-house, early and often.</p></div>
+          <div class="pillar reveal"><span class="pillar-no">05</span><h3>Construction</h3><p>We build what we draw — on budget, on schedule, fully accountable.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats-inner">
+        <div class="stat reveal"><strong data-count="180">0</strong><span>Projects delivered</span></div>
+        <div class="stat reveal"><strong data-count="14">0</strong><span>Years building</span></div>
+        <div class="stat reveal"><strong data-count="60">0</strong><span>People on the team</span></div>
+        <div class="stat reveal"><strong data-count="9">0</strong><span>Design awards</span></div>
+      </div>
+    </section>
+
+    <!-- ============ SUSTAINABILITY ============ -->
+    <section class="sustain" id="sustainability">
+      <div class="sustain-media">
+        <img loading="lazy" onerror="this.style.opacity=0"
+          src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1600&q=80" alt="Sunlight through trees" />
+      </div>
+      <div class="container sustain-content reveal">
+        <p class="eyebrow">Sustainability</p>
+        <h2 class="section-title light">Greener should feel better, not like a sacrifice.</h2>
+        <p>
+          We treat sustainability as a creative brief, not a checklist. Daylight,
+          natural materials, passive comfort and long-life detailing make our
+          buildings cheaper to run <em>and</em> nicer to live in. The best
+          environmental decision is usually also the most beautiful one.
+        </p>
+        <a href="#contact" class="btn btn-ghost light">Talk to us about your goals →</a>
+      </div>
+    </section>
+
+    <!-- ============ STUDIO / ABOUT ============ -->
+    <section class="studio" id="studio">
+      <div class="container studio-grid">
+        <div class="studio-text reveal">
+          <p class="eyebrow">The Studio</p>
+          <h2 class="section-title">A practice built on continuous improvement.</h2>
+          <p>
+            Kaisen Design &amp; Construction is an integrated design-build studio.
+            We grew from a single founder into a tight, multidisciplinary team that
+            takes ownership of a project end to end — design, engineering and the
+            build itself.
+          </p>
+          <p>
+            The name says it: <strong>kaizen</strong>, the discipline of getting a
+            little better every day. We bring it to every drawing, every detail and
+            every site.
+          </p>
+          <a href="#contact" class="btn btn-solid">Work with us</a>
+        </div>
+        <div class="studio-media reveal">
+          <img loading="lazy" onerror="this.style.opacity=0"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=80" alt="Studio workspace" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro reveal">
+          <h2 class="section-title">Start a project.</h2>
+          <p>Tell us what you're dreaming up. We reply within two business days.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:studio@kaisen.design">studio@kaisen.design</a></li>
+            <li><span>Phone</span><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+            <li><span>Studio</span>123 Atelier Lane, Your City</li>
+          </ul>
+        </div>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@email.com" />
+          </div>
+          <div class="field">
+            <label for="type">Project type</label>
+            <select id="type" name="type">
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Interiors</option>
+              <option>Landscape</option>
+              <option>Renovation</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">About your project</label>
+            <textarea id="message" name="message" rows="4" required placeholder="A few lines about the site, scope and timeline…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid btn-block">Send enquiry</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assest/brand-logo.png" alt="Kaisen" class="footer-mark" />
+        <p>Kaisen Design &amp; Construction<br /><span>Design-build, refined.</span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#studio">Studio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Behance">Behance</a>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <span>© <span id="year">2026</span> Kaisen Design &amp; Construction. All rights reserved.</span>
+      <span>Built with kaizen.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

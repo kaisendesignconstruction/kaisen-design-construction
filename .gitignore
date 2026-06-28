@@ -16,3 +16,7 @@ tmp/
 
 # Node (not used yet, but just in case)
 node_modules/
+
+# Heavy source images — the site uses the optimized assest/hero.* files
+assest/1.png
+assest/2.png

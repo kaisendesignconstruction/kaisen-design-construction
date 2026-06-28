@@ -114,28 +114,10 @@
   $$("[data-menu]", menu).forEach((a) => a.addEventListener("click", closeMenu));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
 
-  /* ---------- 4. Project filtering ---------- */
-  const filters = $$(".filter");
-  const cards = $$(".card");
-  const emptyMsg = $("#gridEmpty");
+  /* ---------- 4. Project list + filtering: handled in js/projects.js ---------- */
 
-  filters.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filters.forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-      const cat = btn.dataset.filter;
-      let visible = 0;
-      cards.forEach((card) => {
-        const show = cat === "all" || card.dataset.category === cat;
-        card.classList.toggle("hide", !show);
-        if (show) visible++;
-      });
-      if (emptyMsg) emptyMsg.hidden = visible > 0;
-    });
-  });
-
-  /* ---------- 5. Scroll reveal (sections + project cards) ---------- */
-  const revealEls = $$(".reveal, .card");
+  /* ---------- 5. Scroll reveal (sections) ---------- */
+  const revealEls = $$(".reveal");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries, obs) => entries.forEach((entry) => {
